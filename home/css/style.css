@@ -132,13 +132,14 @@ z-index: 999;
 .red-btn:hover { background: #C9302C; }
 .feature-content {
     background: #FFFFFF;
+	padding: 25px;
+
 	/*
 	border-style: inset;
 	border-width: 2px;
 	border-radius: 10px;
 	*/
     /*padding-bottom: 40px;*/
-	padding: 25px;
 }
 .feature-content-title {
     padding: 0 20px;
@@ -370,6 +371,7 @@ input {
 .portfolio-section {
     height: 100%;
     padding-top: 70px;
+	background: #FFFFFF;
 }
 
 .services-section {
