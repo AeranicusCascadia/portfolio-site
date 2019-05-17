@@ -434,7 +434,7 @@
 					<div class="col-md-offset-1 col-md-10">
 
 					<!-- contact form -->
-					<form method="post" action="php/contact.php"> 	
+					<form method="post" onsubmit="return form_validate()" action="php/contact.php"> 	
 						
 						<label>Name: </label>
 						<input id="name" name="name" type="text" />
@@ -511,6 +511,10 @@
 
       	<!-- custom script -->
         <script src="js/custom.js"></script>
+        
+        <!-- Contact form validation (front end), user created -->
+		<script src="js/contact-form-validator.js"></script>
+
 
     </body>
 </html>
