@@ -13,7 +13,7 @@ foreach ($_POST as $key => $value) {
 
 echo "<br> Thanks for your message!";
 
-$message = "Test message";
+$message = "Just a test message";
 
 mail('contact@cascadia-digital.com', 'This is the subject', $message);
 
