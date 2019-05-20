@@ -43,7 +43,10 @@
 		<!-- Core Style Css -->
         <link rel="stylesheet" href="css/style.css">
         
-    
+        <!-- Owner created style (Aaron) -->
+		<link rel="stylesheet" href="css/owner-created.css">
+
+        
         <!--[if lt IE 9]-->
 		<script src="js/html5shiv.min.js"></script>
 		<!--[endif]-->
@@ -426,29 +429,41 @@
 			<div class="container">
 				<div class="row">
 					
+					<!-- Local anchor for contact sections -->
+					<a name="contact-section-anchor"></a>
+
 					<!-- section heading -->
 					<div class="section-head">
 						<h3>Contact Us.</h3>
 					</div>
+		
+		
+					<!-- Message area to display form validation alerts (non HTML5 -->
+					<div id="contact-form-alert" class="col-md-offset-1 col-md-10"></div>
 
 					<div class="col-md-offset-1 col-md-10">
 
 					<!-- contact form -->
-					<form method="post" onsubmit="return form_validate()" action="php/contact.php"> 	
+					<form class="contact_form" method="post" onsubmit="return form_validate()" action="php/contact.php"> 	
 						
 						<label>Name: </label>
-						<input id="name" name="name" type="text" />
+						<br />
+						<input id="name" class="contact-field" name="name" type="text" />
 						<br />
 
 						<label>Email: </label>
-						<input id="email" name="email" type="email" />	
-						<br />	
+						<br />
 
-						<label>Address: </label>
-						<input id="address" name="address" type="text" />	
-						<br />	
+						<input id="email" class="contact-field" name="email" type="email" />	
+						<br />
+						
+						<label>Message: </label>
+						<textarea id="contact_message" name="contact_message" class="contact_message" rows="8"></textarea>
 
-						<input type="submit" id="submit" value="Submit" />
+						<input type="submit" id="submit" value="Send Message" /> 
+						
+						<br />
+						<input type="hidden" name="address" id="address" />
 						
 					</form>
 
@@ -514,6 +529,9 @@
         
         <!-- Contact form validation (front end), user created -->
 		<script src="js/contact-form-validator.js"></script>
+		
+		<!-- display confirmation message in contact section if message sent -->
+        <script src="js/confirm-message-sent.js"></script>
 
 
     </body>
