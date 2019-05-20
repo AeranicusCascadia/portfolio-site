@@ -1,0 +1,14 @@
+#contact-form-alert {
+	float:right;
+	height: 25px;
+	margin-bottom: 15px;
+	color:red;
+	font-size:1.25em;
+}
+
+label {
+	width: 100px;
+	position:relative;
+}
+
+
