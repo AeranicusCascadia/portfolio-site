@@ -4,10 +4,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $name = trim(filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING));
 $email = trim(filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL));
-$details = trim(filter_input(INPUT_POST,"details",FILTER_SANITIZE_SPECIAL_CHARS));
+$details = trim(filter_input(INPUT_POST,"contact_message",FILTER_SANITIZE_SPECIAL_CHARS));
 
 }
 
+/*
 foreach ($_POST as $key => $value) {
 	if ($key == 'address') {
 		continue;
@@ -15,15 +16,16 @@ foreach ($_POST as $key => $value) {
 			echo $key . ": " . $value . "<br>";
 		}
 	}
+*/
 
+$subject = "Email from Cascadia Digital Workshop contact form";
+$message = "Message from $name \n";
+$message .= $email . "\r\r";
+$message .= $details;
 
-$message = "Just a test message";
+mail('contact@cascadia-digital.com', $subject, $message);
 
-mail('contact@cascadia-digital.com', 'This is the subject', $message);
-
-header('Location: '.$_SERVER['HTTP_REFERER'] . '#contact-section-anchor');
+header('Location: ../thanks.html');
  
-
-
 ?>
 
