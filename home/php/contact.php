@@ -8,16 +8,6 @@ $details = trim(filter_input(INPUT_POST,"contact_message",FILTER_SANITIZE_SPECIA
 
 }
 
-/*
-foreach ($_POST as $key => $value) {
-	if ($key == 'address') {
-		continue;
-		} else {
-			echo $key . ": " . $value . "<br>";
-		}
-	}
-*/
-
 $subject = "Email from Cascadia Digital Workshop contact form";
 $message = "Message from $name \n";
 $message .= $email . "\r\r";
@@ -25,7 +15,7 @@ $message .= $details;
 
 mail('contact@cascadia-digital.com', $subject, $message);
 
-header('Location: ../thanks.html');
+header('Location: ../thanks.php');
  
 ?>
 

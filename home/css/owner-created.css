@@ -1,3 +1,7 @@
+.padded-content {
+	padding: 8px 0px;
+}
+
 .contact_form {
 }
 
@@ -42,4 +46,29 @@ label {
 	background-color:gray;
 }
 
+.min-header-short {
+  height: 20vh;
+  background: #1c1c1c;
+  position: relative;
+}
 
+.fixed-footer {
+	background: #1c1c1c;
+	padding:30px;
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+
+.cabin-font {
+	font-family: 'Cabin';
+}
+
+#thanks {
+	margin-top:50px;
+	margin-bottom:35px;
+}
+
+.thanks-content {
+	font-size:1.5em;
+}
