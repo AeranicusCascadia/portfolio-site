@@ -1,14 +1,85 @@
+.padded-content {
+	padding: 8px 0px;
+}
+
+.contact_form {
+}
+
 #contact-form-alert {
-	float:right;
 	height: 25px;
 	margin-bottom: 15px;
 	color:red;
 	font-size:1.25em;
 }
 
+#message_label {
+	margin-top:10px;
+}
+
+.contact_message {
+	width: 98%;
+	margin-bottom: 10px;
+	resize: none;
+}
+
+.contact-field {
+	width:40%;
+}
+
 label {
 	width: 100px;
 	position:relative;
+	margin-top:10px;
+	margin-bottom:5px;
+	font-size:1.2em;
 }
 
+#submit {
+	font-weight:bold;
+	padding: 10px;
+	border:1px solid #004a93;
+	border-radius:8px;
+}
 
+#submit:hover {
+	color:#FFFFFF;
+	background-color:gray;
+}
+
+.min-header-short {
+  height: 20vh;
+  background: #1c1c1c;
+  position: relative;
+}
+
+.fixed-footer {
+	background: #1c1c1c;
+	padding:30px;
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+
+.cabin-font {
+	font-family: 'Cabin';
+}
+
+#thanks {
+	margin-top:50px;
+	margin-bottom:35px;
+}
+
+.thanks-content {
+	font-size:1.5em;
+}
+
+.cdw-portfolio {
+	margin: 50px auto 500px auto;
+}
+
+.portfolio-item {
+	display: inline-block;
+	height: 640x;
+	width: 500px;
+	margin: 0 20px;
+}

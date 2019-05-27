@@ -40,7 +40,7 @@ body {
 }
 
 .section-head {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   text-align: center;
 }
 .section-head h3 {
@@ -465,14 +465,18 @@ p {
   width: 95%;
 }
 .portfolio .items {
-  padding: 0 15px;
-  margin-bottom: 30px;
+	
+	padding: 0 15px;
+	margin: 0 auto;
 }
 .portfolio .item-img {
   position: relative;
   overflow: hidden;
+  max-width:640px;
+  max-height:500px;
 }
 .portfolio .item-img:hover .item-img-overlay {
+	
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -863,7 +867,7 @@ p {
 -------------------------------------------------------- */
 footer {
   background: #1c1c1c;
-  padding: 30px;
+  padding:30px;  
 }
 footer p {
   font-size: 13px;

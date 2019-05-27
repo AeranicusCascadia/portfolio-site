@@ -4,18 +4,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $name = trim(filter_input(INPUT_POST,"name",FILTER_SANITIZE_STRING));
 $email = trim(filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL));
-$address = trim(filter_input(INPUT_POST,"address",FILTER_SANITIZE_STRING));
+$details = trim(filter_input(INPUT_POST,"contact_message",FILTER_SANITIZE_SPECIAL_CHARS));
+
 }
 
-foreach ($_POST as $key => $value) {
-	echo $key . ": " . $value . "<br>";
-	}
+$subject = "Email from Cascadia Digital Workshop contact form";
+$message = "Message from $name \n";
+$message .= $email . "\r\r";
+$message .= $details;
 
-echo "<br> Thanks for your message!";
+mail('contact@cascadia-digital.com', $subject, $message);
 
-$message = "Just a test message";
-
-mail('contact@cascadia-digital.com', 'This is the subject', $message);
-
+header('Location: ../thanks.php');
+ 
 ?>
 
